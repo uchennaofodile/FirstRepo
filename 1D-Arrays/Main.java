@@ -27,11 +27,15 @@ public class Main {
         //     System.err.println("Error: " + e.getMessage());
         // }
 
-System.out.println("Array traversal");
-//System.out.println("_______________");
-sda.traverseArray();
+// System.out.println("Array traversal");
+// //System.out.println("_______________");
+// sda.traverseArray();
 
-System.out.println("Search Int Array");
-sda.searchIntArray(50);
+// System.out.println("Search Int Array");
+// sda.searchIntArray(50);
+
+System.out.println("Delete Value");
+sda.deleteValue(121);
+System.out.println(sda.arr[0]);
     }
 }

@@ -64,5 +64,19 @@ catch (Exception e) {
 }
   } 
  
+public void deleteValue(int valueToDelete) {//time complexity and space 
+    //complexity are both o(1) b/c new memory is not needed to run the fxn
+    try {
+
+        arr[valueToDelete] = Integer.MIN_VALUE; //O(1)
+        System.out.println("The value has been deleted succesfully."); //O(1)
+        
+    } catch (ArrayIndexOutOfBoundsException e) {
+        // TODO: handle exception
+        System.err.println("The value that is provided is not in the range of the array.: " + e.getMessage()); //O(1)
+    }
+    
+}
+
 
 }
