@@ -32,8 +32,8 @@ public class Main {
 
     TwoDimensionArray tArray = new TwoDimensionArray(3, 4);
     System.out.println("Inserting Values");
+    tArray.insertValueInTheArray(0, 3, 20);
     tArray.insertValueInTheArray(0, 0, 45);
-    // tArray.insertValueInTheArray(0, 0, 45);
     // tArray.insertValueInTheArray(0, 9, 45);
     // System.out.println(Arrays.deepToString(tArray.arr));
 
@@ -42,5 +42,17 @@ public class Main {
     tArray.accessValueInTheArray(0, 0);
     tArray.accessValueInTheArray(0, 3);
     tArray.accessValueInTheArray(0, 12213);
+
+    System.out.println("2D Array Traversal");
+
+    tArray.traverse2DArray();
+    System.out.println("2D Search");
+    tArray.searchingValueIn2DArray(20);
+
+    System.out.println("Delete an element");
+    tArray.deleteValueIn2DArray(0, 0);
+    tArray.deleteValueIn2DArray(0, 0);
+    tArray.deleteValueIn2DArray(0, 2323);
+    System.out.println(Arrays.deepToString(tArray.arr));
   }
 }
