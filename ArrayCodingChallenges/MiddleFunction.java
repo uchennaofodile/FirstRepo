@@ -15,6 +15,14 @@ public class MiddleFunction {
     return result;
   }
 
+  public static int[] middle2(int[] arr) {
+    int result[] = new int[arr.length - 2];
+    for (int i = 1; i < arr.length - 1; i++) {
+      result[i - 1] = arr[i];
+    }
+    return result;
+  }
+
   public static void main(String[] args) {
     //MiddleFunction mfFunction = new MiddleFunction();
     int[] array = { 1, 2, 3, 4 };
