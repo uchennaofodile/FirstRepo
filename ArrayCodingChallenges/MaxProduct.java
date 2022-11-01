@@ -26,27 +26,24 @@ public class MaxProduct {
 
     int greatest1 = 0;
     int greatest2 = 0;
-    int[] intArray2 = new int[2];
-    int[] intArray3 = new int[intArray.length];
+    int[] intArray2 = new int[intArray.length];
 
     for (int i = 0; i < intArray.length; i++) {
       if (intArray[i] > greatest1) {
         greatest1 = intArray[i];
-        intArray2[0] = greatest1;
       }
-      intArray3[i] = intArray[i];
+      intArray2[i] = intArray[i];
     }
 
-    for (int k = 0; k < intArray3.length; k++) {
-      if (intArray3[k] == greatest1) {
-        intArray3[k] = 0;
+    for (int k = 0; k < intArray2.length; k++) {
+      if (intArray2[k] == greatest1) {
+        intArray2[k] = 0;
       }
     }
 
-    for (int j = 0; j < intArray3.length; j++) {
-      if (intArray3[j] > greatest2) {
+    for (int j = 0; j < intArray2.length; j++) {
+      if (intArray2[j] > greatest2) {
         greatest2 = intArray[j];
-        intArray2[1] = greatest2;
       }
     }
 
