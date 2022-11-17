@@ -1,7 +1,7 @@
-public class Node {
+ class Node {
   //Node value
-  public int value;
+   int value;
   //Reference to the location in
   //memory of the next node in the list
-  public Node next;
+   Node next;
 }

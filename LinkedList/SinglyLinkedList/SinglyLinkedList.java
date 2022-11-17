@@ -3,10 +3,10 @@
  */
 public class SinglyLinkedList {
   //Head is not a node, it is a pointer to the first node
-  public Node head;
+  Node head;
   //Tail is not a node, it is a pointer to the last node
-  public Node tail;
-  public int size;/*How many many nodes
+  Node tail;
+  int size;/*How many many nodes
  we have in our singly linked list*/
 
   public Node createSinglyLinkedList(int nodeValue) { //O(1) time and space (only creating a single node)
