@@ -60,16 +60,9 @@ public class ThreeInOne {
   // isEmpty
   public boolean isEmpty(int stackNum) {
     // TODO
+
     boolean value = false;
-    if (stackNum == 1) {
-      if (topOfStack == -1) {
-        value = true;
-      }
-    } else if (stackNum == 2) {
-      if (topOfStack == -1) {
-        value = true;
-      }
-    } else if (stackNum == 3) {
+    if (stackNum != 0) {
       if (topOfStack == -1) {
         value = true;
       }
