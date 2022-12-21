@@ -20,5 +20,9 @@ class Main {
     System.out.println();
     //System.out.println(binaryTreeArray.arr[10]);
     binaryTreeArray.postOrder(1);
+    System.out.println();
+    binaryTreeArray.levelOrder();
+    System.out.println();
+    binaryTreeArray.search("N10");
   }
 }

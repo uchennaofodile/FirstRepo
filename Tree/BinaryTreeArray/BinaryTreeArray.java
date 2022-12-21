@@ -68,4 +68,25 @@ public class BinaryTreeArray {
     postOrder(index * 2 + 1); //O(n/2)
     System.out.print(arr[index] + " ");
   }
+
+  //Level Order traversal - breath first
+  //Time is O(n) Space is O(1)
+  public void levelOrder() {
+    for (int i = 1; i <= lastUsedIndex; i++) {
+      System.out.print(arr[i] + " ");
+    }
+  }
+
+  //Search
+  //Time is O(n) Space is O(1)
+  public int search(String value) {
+    for (int i = 1; i <= lastUsedIndex; i++) {
+      if (arr[i].equals(value)) {
+        System.out.println(value + " is at index " + i);
+        return i;
+      }
+    }
+    System.out.println("The values does not exist in this BT");
+    return -1;
+  }
 }
