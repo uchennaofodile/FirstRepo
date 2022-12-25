@@ -60,7 +60,7 @@ public class SinglyLinkedList {
       head = node; //head now points to new first node
     } else if (location >= size) { //O(1)
       node.next = null;
-      tail.next = node;
+      tail.next = node;//sets the old last node's reference to our new last node
       tail = node; //tail points to the last node
     } else { //O(1)
       Node tempNode = head; //start loop from head
