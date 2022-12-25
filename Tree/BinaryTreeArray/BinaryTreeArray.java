@@ -89,4 +89,29 @@ public class BinaryTreeArray {
     System.out.println("The values does not exist in this BT");
     return -1;
   }
+
+  //Delete Method
+  //Time O(n) / Space is O(1)
+  public void delete(String value) {
+    int location = search(value); //O(n)
+    if (location == -1) {
+      return;
+    } else {
+      arr[location] = arr[lastUsedIndex];
+      lastUsedIndex--;
+      System.out.println("The node successfully deleted");
+    }
+  }
+
+  //Delete Binary Tree
+  public void deleteBinaryTree() {
+    try {
+      arr = null;
+      System.out.println("The binary tree was successfully deleted.");
+    } catch (Exception e) {
+      System.out.println(
+        "There was an error deleted the binary tree: " + e.getMessage()
+      );
+    }
+  }
 }

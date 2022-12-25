@@ -24,5 +24,9 @@ class Main {
     binaryTreeArray.levelOrder();
     System.out.println();
     binaryTreeArray.search("N10");
+    binaryTreeArray.delete("N5");
+    binaryTreeArray.levelOrder();
+    binaryTreeArray.deleteBinaryTree();
+    //binaryTreeArray.levelOrder();
   }
 }
