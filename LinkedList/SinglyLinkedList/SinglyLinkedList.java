@@ -60,7 +60,7 @@ public class SinglyLinkedList {
       head = node; //head now points to new first node
     } else if (location >= size) { //O(1)
       node.next = null;
-      tail.next = node;//sets the old last node's reference to our new last node
+      tail.next = node; //sets the old last node's reference to our new last node
       tail = node; //tail points to the last node
     } else { //O(1)
       Node tempNode = head; //start loop from head
@@ -136,68 +136,40 @@ nextNode doesn't "really" exist (although it does)*/
   //Deleting a node from a SinglyLinkedList
   //Time: O(a+b) / Space: O(1)
   public void deletionOfNode(int location) {
-    //Checks if List Exist
-    if (head == null) { //O(1)
+    // Checks if the linked list exists
+    if (head == null) {
       System.out.println("The SLL does not exist!");
       return;
     }
-    //Deletes first element
-    else if (location == 0) { //O(1)
-      //Head equals the next element in the list
-      head = head.next; //O(1)
 
-      size--; //O(1)
-      //Only one node
-      if (size == 0) { //O(1)
+    // Deletes the first element
+    if (location == 0) {
+      head = head.next;
+      size--;
+
+      // If the linked list is now empty, set tail to null
+      if (size == 0) {
         tail = null;
       }
-    } else if (location >= size) { //O(1)
+    }
+    // Deletes the last element
+    else if (location >= size) {
       Node tempNode = head;
-      Node pointer = head;
-      /*We use size -1 because we need to find the node located
-       * before the last one
-       *
-       * DELETION AT THE END
-       */
-      //new code starts
-      // while (tempNode.next != null) {
-      //   pointer = tempNode;
-      //   tempNode = tempNode.next;
-      // }
-      // if (tempNode == head) {
-      //   tail = head = null; //O(1)
-      //   size--;
-      //   return;
-      // }
-      // pointer.next = null;
-      // tail = tempNode;
-      // System.out.println("The tail value is: " + this.tail.value);
-      // size--;
-      //new code ends
-
-      for (int i = 0; i < size - 1; i++) { //O(n)
-        tempNode = tempNode.next; //Goes to node just before the end
-      }
-      //Only one node
-      if (tempNode == head) {
-        tail = head = null; //O(1)
-        size--;
-        return;
-      }
-      /*Sets tail to null and
-        second to last node is set to tail
-         */
-      tempNode.next = null; //O(1)
-      tail = tempNode;
-      size--;
-    } else {
-      Node tempNode = head;
-      for (int i = 0; i < location - 1; i++) { //O(n)
+      for (int i = 0; i < size - 1; i++) {
         tempNode = tempNode.next;
       }
-      //Assigns to next node after deleted one
+      tempNode.next = null;
+      tail = tempNode;
+      size--;
+    }
+    // Deletes an element in the middle of the linked list
+    else {
+      Node tempNode = head;
+      for (int i = 0; i < location - 1; i++) {
+        tempNode = tempNode.next;
+      }
       tempNode.next = tempNode.next.next;
-      size--; //O(1)
+      size--;
     }
   }
 
