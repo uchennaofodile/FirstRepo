@@ -79,7 +79,7 @@ class Main {
     );
 
     //-------------Retrieval---------------
-    //boolean contains() - takes element
+    //boolean contains(E element) - takes element
     System.out.println(intLL.contains(2121));
     System.out.println(intLL.contains(21));
 
