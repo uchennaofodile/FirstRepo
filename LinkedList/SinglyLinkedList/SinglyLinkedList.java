@@ -134,7 +134,7 @@ nextNode doesn't "really" exist (although it does)*/
   }
 
   //Deleting a node from a SinglyLinkedList
-  //Time: O(a+b) / Space: O(1)
+  //Time: O(n) / Space: O(1)
   public void deletionOfNode(int location) {
     // Checks if the linked list exists
     if (head == null) {
