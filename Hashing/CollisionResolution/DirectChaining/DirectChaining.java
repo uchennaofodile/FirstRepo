@@ -10,7 +10,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class DirectChaining{
+class DirectChaining{
 //each element is a linked list
 LinkedList<String>[] hashTable;
 int maxChainSize = 5;
@@ -42,10 +42,13 @@ public void insertHashTable(String word){
 
 public void displayHashTable(){
     if(hashTable == null){
+        System.out.println("The hashtable doesn't exist");
+        }
+        return;
+    } else{
         System.out.println("\n--------------HashTable--------------");
         for(int i =0; i<hashTable.length; i++){
             System.out.println("Index "+ i+ ", key:" + hashTable[i]);
-        }
     }
 }
 
