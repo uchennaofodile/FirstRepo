@@ -2,9 +2,9 @@ class Main{
 
 
     public static void main(String[] args){
-DirectChaining dc = new DirectChaining(15);
+DirectChaining dc = new DirectChaining(13);
 dc.insertHashTable("The");
-dc.insertHashTable("qucik");
+dc.insertHashTable("quick");
 dc.insertHashTable("brown");
 dc.insertHashTable("fox");
 dc.insertHashTable("jumped");

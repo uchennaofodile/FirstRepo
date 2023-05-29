@@ -43,13 +43,14 @@ public void insertHashTable(String word){
 public void displayHashTable(){
     if(hashTable == null){
         System.out.println("The hashtable doesn't exist");
+         return;
         }
-        return;
-    } else{
+       else{
         System.out.println("\n--------------HashTable--------------");
         for(int i =0; i<hashTable.length; i++){
             System.out.println("Index "+ i+ ", key:" + hashTable[i]);
     }
+    } 
 }
 
 
